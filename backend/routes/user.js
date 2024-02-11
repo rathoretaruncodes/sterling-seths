@@ -67,7 +67,7 @@ router.post("/signin", async (req, res) => {
     if (!success) {
         return res.status(411).json({
             message: "Email already taken / Incorrect inputs"
-        })
+        });
     }
 
     const user = await User.findOne({
@@ -82,15 +82,15 @@ router.post("/signin", async (req, res) => {
   
         res.json({
             token: token
-        })
+        });
         return;
     }
 
     
     res.status(411).json({
         message: "Error while logging in"
-    })
-})
+    });
+});
 
 const updateBody = zod.object({
 	password: zod.string().optional(),
