@@ -1,6 +1,4 @@
-
 const express = require('express');
-
 const router = express.Router();
 const zod = require("zod");
 const { User, Account } = require("../db");

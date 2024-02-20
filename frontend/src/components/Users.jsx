@@ -17,8 +17,6 @@ export const Users = () => {
         })
     }, [filter])
     return <>
-    <div>
-    </div>
     <div className='my-2'>
         <input onChange={(e) => {
             setFilter(e.target.value)
