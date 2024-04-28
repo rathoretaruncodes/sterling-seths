@@ -19,13 +19,13 @@ export const Signup = () => {
       <div className="rounded-lg bg-white shadow-2xl w-96 text-center p-2 h-max px-4">
         <Heading label={"Join the privileged few, create your account!"} />
         <SubHeading label={"Please enter your credentials"} />
-        <InputBox onChange={e => {
+        <InputBox onChange={(e) => {
           setFirstName(e.target.value);
         }} label={"First Name"} />
         <InputBox onChange={(e) => {
           setLastName(e.target.value);
         }} label={"Last Name"} />
-        <InputBox onChange={e => {
+        <InputBox onChange={(e) => {
           setUsername(e.target.value);
         }} label={"Email"} />
         <InputBox onChange={(e) => {
