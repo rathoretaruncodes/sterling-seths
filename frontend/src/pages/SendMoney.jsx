@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useState } from 'react';
 import { Heading } from "../components/Heading"
@@ -8,6 +8,7 @@ export const SendMoney = () => {
     const id = searchParams.get("id");
     const name = searchParams.get("name");
     const [amount, setAmount] = useState(0);
+    const navigate = useNavigate();
 
     return <div className="flex justify-center h-screen">
         <div className="h-full flex flex-col">
@@ -44,6 +45,7 @@ export const SendMoney = () => {
                                 Authorization: "Bearer " + localStorage.getItem("token")
                             }
                         })
+                        navigate("/dashboard")
                     }} className="justify-center rounded-md text-sm font-medium h-10 px-4 py-2 w-full bg-fuchsia-800 focus:bg-fuchsia-900 hover:bg-fuchsia-900 text-white">
                         Initiate Transfer
                     </button>
